@@ -1,38 +1,83 @@
 body {
+  width: 400px;
   font-size: 18px;
+  background-color: white;
+  display: flex;
+  flex-flow: column;
+  text-align: center;
 }
 
 h1, h2, h3, a {
   font-family: "Fraunces", serif;
   font-weight: 900; /*700, 900*/
+  text-align: center;
 }
 
 h4, .names {
   font-family: "Fraunces", serif;
   font-weight: 700; /*700, 900*/
+  text-align: center;
 }
 
-p {
+.transform p, .stand-out p {
   font-family: "Barlow", sans-serif;
   font-weight: 600;
+  color: hsl(232deg, 10%, 55%);
+}
+
+.transform img, .stand-out img, .more-images img {
+  width: 400px;
+  height: auto;
 }
 
 h1, h4 {
   text-transform: uppercase;
 }
 
-/*Primary
-Soft red: hsl(7, 99%, 70%) (pink glass background
-Yellow: hsl(51, 100%, 49%) (egg background)
-Dark desaturated cyan (graphic design text): hsl(167, 40%, 24%)
-Dark blue (photography text): hsl(198, 62%, 26%)
-Dark moderate cyan (footer): hsl(168, 34%, 41%)
-Neutral
-Very dark desaturated blue: hsl(212, 27%, 19%)
-Very dark grayish blue: hsl(213, 9%, 39%)
-Dark grayish blue: hsl(232, 10%, 55%)
-Grayish blue: hsl(210, 4%, 67%)
-White: hsl(0, 0%, 100%)*/
+h2, a, .names {
+  color: hsl(212deg, 27%, 19%);
+}
+
 .pageheader {
   color: white;
+  background-image: url(images/photos/image-header.jpg);
+}
+
+.testimonials {
+  box-sizing: border-box;
+  padding: 10%;
+}
+.testimonials img {
+  border: 0px solid;
+  border-radius: 50%;
+}
+.testimonials p {
+  font-style: bold;
+}
+
+.flattery {
+  color: hsl(213deg, 9%, 39%);
+}
+
+h4, .profession {
+  color: hsl(210deg, 4%, 67%);
+}
+
+header {
+  display: none;
+}
+
+.graphic-design {
+  background-image: url(images/photos/image-graphic-design.jpg);
+  color: hsl(167deg, 40%, 24%);
+}
+
+.photography {
+  background-image: url(images/photos/image-photography.jpg);
+  color: hsl(198deg, 62%, 26%);
+}
+
+footer {
+  background-color: hsl(168deg, 34%, 41%);
+  /*space the about-services-projects (evenly? between? about?)*/
 }/*# sourceMappingURL=style.css.map */

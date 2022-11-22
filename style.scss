@@ -1,5 +1,10 @@
 body {
+    width: 400px;
     font-size: 18px;
+    background-color: white;
+    display: flex;
+    flex-flow: column;
+    text-align: center;
 }
 
 @mixin text-font {
@@ -14,33 +19,77 @@ body {
 
 h1, h2, h3, a {
     @include title-font(900);
+    text-align: center;
 }
 
 h4, .names {
     @include title-font(700);
+    text-align: center;
 }
 
-p {
-    @include text-font;
+.transform, .stand-out {
+    p {
+        @include text-font;
+        color: hsl(232, 10%, 55%);
+    }
 }
+
+.transform, .stand-out, .more-images {
+    img {
+        width: 400px;
+        height: auto;
+    }
+}
+
 
 h1, h4 {
     text-transform: uppercase;
 }
 
-/*Primary
-Soft red: hsl(7, 99%, 70%) (pink glass background
-Yellow: hsl(51, 100%, 49%) (egg background)
-Dark desaturated cyan (graphic design text): hsl(167, 40%, 24%)
-Dark blue (photography text): hsl(198, 62%, 26%)
-Dark moderate cyan (footer): hsl(168, 34%, 41%)
-Neutral
-Very dark desaturated blue: hsl(212, 27%, 19%)
-Very dark grayish blue: hsl(213, 9%, 39%)
-Dark grayish blue: hsl(232, 10%, 55%)
-Grayish blue: hsl(210, 4%, 67%)
-White: hsl(0, 0%, 100%)*/
+h2, a, .names {
+    color: hsl(212, 27%, 19%);
+}
 
 .pageheader {
     color: white;
+    background-image: url(images/photos/image-header.jpg);
+}
+
+.testimonials {
+    box-sizing: border-box;
+    padding: 10%;
+    img {
+        border: 0px solid;
+        border-radius: 50%;
+    }
+    p {
+        font-style: bold;
+    }
+}
+
+.flattery {
+    color: hsl(213, 9%, 39%);
+}
+
+h4, .profession {
+    color: hsl(210, 4%, 67%);
+}
+
+header {
+    display: none;
+}
+
+.graphic-design {
+    background-image: url(images/photos/image-graphic-design.jpg);
+    color: hsl(167, 40%, 24%);
+}
+
+.photography {
+    background-image: url(images/photos/image-photography.jpg);
+    color: hsl(198, 62%, 26%);
+}
+
+footer {
+    background-color: hsl(168, 34%, 41%);
+    /*space the about-services-projects (evenly? between? about?)*/
 }
