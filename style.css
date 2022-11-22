@@ -1,5 +1,38 @@
-html {
+body {
   font-size: 18px;
-  font-family: Barlow;
+}
+
+h1, h2, h3, a {
+  font-family: "Fraunces", serif;
+  font-weight: 900; /*700, 900*/
+}
+
+h4, .names {
+  font-family: "Fraunces", serif;
+  font-weight: 700; /*700, 900*/
+}
+
+p {
+  font-family: "Barlow", sans-serif;
   font-weight: 600;
+}
+
+h1, h4 {
+  text-transform: uppercase;
+}
+
+/*Primary
+Soft red: hsl(7, 99%, 70%) (pink glass background
+Yellow: hsl(51, 100%, 49%) (egg background)
+Dark desaturated cyan (graphic design text): hsl(167, 40%, 24%)
+Dark blue (photography text): hsl(198, 62%, 26%)
+Dark moderate cyan (footer): hsl(168, 34%, 41%)
+Neutral
+Very dark desaturated blue: hsl(212, 27%, 19%)
+Very dark grayish blue: hsl(213, 9%, 39%)
+Dark grayish blue: hsl(232, 10%, 55%)
+Grayish blue: hsl(210, 4%, 67%)
+White: hsl(0, 0%, 100%)*/
+.pageheader {
+  color: white;
 }/*# sourceMappingURL=style.css.map */
