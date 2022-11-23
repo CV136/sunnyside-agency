@@ -3,7 +3,7 @@ body {
     font-size: 18px;
     background-color: white;
     display: flex;
-    flex-flow: column;
+    flex-wrap: wrap;
     text-align: center;
 }
 
@@ -15,29 +15,33 @@ body {
 @mixin title-font($weight) {
     font-family: 'Fraunces', serif;
     font-weight: $weight; /*700, 900*/
+    text-align: center
 }
 
 h1, h2, h3, a {
     @include title-font(900);
-    text-align: center;
 }
 
 h4, .names {
     @include title-font(700);
-    text-align: center;
 }
+
+/*stylized underline for a?
+text-decoration: underline*/
 
 .transform, .stand-out {
     p {
         @include text-font;
         color: hsl(232, 10%, 55%);
     }
-}
-
-.transform, .stand-out, .more-images {
     img {
         width: 375px;
-        height: auto;
+        height: 312;
+    }
+    &__text {
+        width: 327px;
+        height: 309px;
+        margin: auto;
     }
 }
 
@@ -50,9 +54,15 @@ h2, a, .names {
     color: hsl(212, 27%, 19%);
 }
 
+div {
+    background-size: cover;
+    background-position: center;
+}
+
 .pageheader {
     color: white;
     background-image: url(images/photos/image-header.jpg);
+    padding: 10px;
 }
 
 .testimonials {
@@ -63,7 +73,7 @@ h2, a, .names {
         border-radius: 50%;
     }
     p {
-        font-style: bold;
+        font-weight: 700;
     }
 }
 
@@ -89,7 +99,30 @@ header {
     color: hsl(198, 62%, 26%);
 }
 
+.graphic-design, .photography {
+    height: 600px;
+    display: flex;
+    &__text {
+        align-self: flex-end;
+    }
+}
+
+.more-images {
+    height: 375px;
+    object-fit: contain;
+    display: flex;
+    flex-wrap: wrap;
+    img {
+        width: 187px;
+        height: 188px;
+    }
+}
+
 footer {
     background-color: hsl(168, 34%, 41%);
-    /*space the about-services-projects (evenly? between? about?)*/
+    height: 350px;
+    /*space-around the about-services-projects*/
+    /*only in mobile view tho, they're all in the center on desktop view -> gap?*/
 }
+
+/*a wrap-reverse for the div with the egg in desktop mode?*/
